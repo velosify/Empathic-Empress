@@ -104,6 +104,18 @@
 <style>
         html { overflow-x: hidden; }
         body { position: relative; overflow-x: hidden; max-width: 100%; }
+        /* Rotate hero image 90deg on mobile so the side decorations aren't cropped */
+        @media (max-width: 767px) {
+            .hero-bg-img {
+                position: absolute !important;
+                top: 50% !important;
+                left: 50% !important;
+                width: 130vh !important;
+                height: 110vw !important;
+                max-width: none !important;
+                transform: translate(-50%, -50%) rotate(90deg) !important;
+            }
+        }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
@@ -230,7 +242,7 @@
 <!-- Divine Hero -->
 <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-6 pt-24 md:pt-0">
 <div class="absolute inset-0 z-0">
-<img alt="Mystical pink and gold background with rose quartz crystals, pearls, seashells and rose petals" class="w-full h-full object-cover" src="assets/hero.png"/>
+<img alt="Mystical pink and gold background with rose quartz crystals, pearls, seashells and rose petals" class="hero-bg-img w-full h-full object-cover" src="assets/hero.png"/>
 <!-- Soft pearl scrim in the center lightens the bright glow so the deep-rose headline reads clearly -->
 <div class="absolute inset-0 [background:radial-gradient(circle_at_50%_45%,rgba(245,245,241,0.55)_0%,rgba(245,245,241,0)_55%)]"></div>
 <!-- Bottom fade blends the hero into the page surface -->
