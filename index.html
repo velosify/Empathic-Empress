@@ -236,7 +236,7 @@
 </div>
 <div class="relative z-10 text-center max-w-3xl mx-auto space-y-8 animate-float">
 <div class="w-24 h-24 mx-auto mb-6">
-<img alt="Decorative branding emblem with crown and rose" class="w-full h-full object-contain filter drop-shadow-lg" src="assets/logo.png"/>
+<img alt="Decorative branding emblem with crown and rose" class="w-full h-full object-contain filter drop-shadow-lg" src="assets/logo.jpg"/>
 </div>
 <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary leading-tight [text-shadow:0_2px_16px_rgba(245,245,241,0.9),0_1px_3px_rgba(124,83,87,0.25)]">
                     Step into Your Divine Radiance
@@ -327,7 +327,7 @@
 <img alt="A serene woman in flowing rose and gold silk, surrounded by soft divine light" class="w-full h-full object-cover" src="assets/stella.png"/>
 </div>
 <div class="absolute -bottom-8 -right-8 w-48 h-48 bg-crystal-glint rounded-full p-8 shadow-lg hidden md:flex items-center justify-center">
-<img alt="Emblem" class="w-full opacity-60" src="assets/logo.png"/>
+<img alt="Emblem" class="w-full opacity-60" src="assets/logo.jpg"/>
 </div>
 </div>
 <div class="space-y-8">
@@ -519,5 +519,14 @@
   track.appendChild(clone);
   track.querySelectorAll('.glass-card').forEach(function (c) { c.classList.add('is-visible'); });
 })();
+</script>
+<script>
+/* Prevent pinch-zoom on iOS Safari, which ignores user-scalable=no */
+['gesturestart', 'gesturechange', 'gestureend'].forEach(function (ev) {
+  document.addEventListener(ev, function (e) { e.preventDefault(); }, { passive: false });
+});
+document.addEventListener('touchmove', function (e) {
+  if (e.scale && e.scale !== 1) { e.preventDefault(); }
+}, { passive: false });
 </script>
 </body></html>
